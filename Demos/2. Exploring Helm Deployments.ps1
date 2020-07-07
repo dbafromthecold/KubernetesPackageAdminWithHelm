@@ -47,9 +47,24 @@ helm install mysql stable/mysql
 
 
 
+# view the status of the chart
+helm status mysql
 
-# view the deployment
+
+
+# view the releases
 helm list
+
+
+
+# get information about the release
+helm get all mysql
+
+
+
+# get certain information about the release
+helm get values mysql
+helm get notes mysql
 
 
 
