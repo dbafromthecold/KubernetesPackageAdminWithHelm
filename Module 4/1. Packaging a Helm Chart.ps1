@@ -104,6 +104,60 @@ kubectl get all
 
 
 
+# delete the release
+helm delete ourchart
+
+
+
+# update the deployment yaml to use template directives
+# copy {{ .Release.Name }} in for the deployment name
+
+
+
+# also update the value.yaml file, removing the old file
+rm .\ourchart\values.yaml
+
+
+
+# and add in a custom value
+echo 'containerImage: nginx:1.17' > .\ourchart\values.yaml
+
+
+# update the deployment yaml to use the new default value
+# copy {{ .Values.containerImage }} in for the container image name
+
+
+
+# now redeploy the chart
+helm install ourchart .\ourchart
+
+
+
+# view release
+helm list
+
+
+
+# view kubernetes objects
+kubectl get all
+
+
+
+# view the container image in the deployment
+kubectl get deployment -o jsonpath='{ .items[*].spec.template.spec.containers[*].image }'
+
+
+
+# now upgrade the chart, overriding the image name in the values file
+helm upgrade ourchart .\ourchart --set containerImage=nginx:1.18
+
+
+
+# view the container image in the deployment
+kubectl get deployment -o jsonpath='{ .items[*].spec.template.spec.containers[*].image }'
+
+
+
 # package the chart
 helm package .\ourchart --destination C:\Charts
 

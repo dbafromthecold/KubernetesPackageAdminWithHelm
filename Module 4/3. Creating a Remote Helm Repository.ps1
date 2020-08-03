@@ -63,8 +63,23 @@ helm repo add dbafromthecold https://raw.githubusercontent.com/dbafromthecold/De
 
 
 
+# navigate to folder containing repository names and URLs
+# C:\Users\apruski\AppData\Roaming\helm\
+
+
+
+# view cached index.yaml file for repository
+# C:\Users\apruski\AppData\Local\Temp\helm\repository
+
+
+
 # search new Helm repository
 helm search repo dbafromthecold/ourchart
+
+
+
+# we can also see the chart in the Helm section of 
+# of the Kubernetes extension for vs code
 
 
 

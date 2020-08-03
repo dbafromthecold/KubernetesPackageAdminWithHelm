@@ -21,46 +21,40 @@ helm list
 
 # view status of release
 helm status mysql
-
-
-
-# get release hooks
-helm get hooks mysql
+clear
 
 
 
 # get release manifests
-helm get manifest mysql
+helm get manifest mysql > C:\Temp\manifests.txt
 
 
 
 # get release values
-helm get values mysql
+helm get values mysql > C:\Temp\values.txt
 
 
 
 # get release notes
-helm get notes mysql
+helm get notes mysql > C:\Temp\notes.txt
 
 
 
 # get all from release
-helm get all mysql
+helm get all mysql  > C:\Temp\all.txt
 
 
 
 # view kubernetes objects
 kubectl get all
+clear
 
-
-
-# view secretes
-kubectl get secrets
 
 
 
 # view release history
 helm history mysql
+clear
 
 
 
