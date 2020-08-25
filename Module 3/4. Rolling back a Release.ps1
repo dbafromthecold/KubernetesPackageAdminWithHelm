@@ -1,6 +1,7 @@
 ###################################################################################################
 ###################################################################################################
 #
+# https://www.pluralsight.com/courses/kubernetes-package-administration-helm
 #
 # Module 3 of Kubernetes Package Administration with Helm
 # 

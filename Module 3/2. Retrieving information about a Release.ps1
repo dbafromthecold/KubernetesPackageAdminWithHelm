@@ -1,6 +1,7 @@
 ###################################################################################################
 ###################################################################################################
 #
+# https://www.pluralsight.com/courses/kubernetes-package-administration-helm
 #
 # Module 3 of Kubernetes Package Administration with Helm
 # 
@@ -21,7 +22,6 @@ helm list
 
 # view status of release
 helm status mysql
-clear
 
 
 
@@ -47,14 +47,12 @@ helm get all mysql  > C:\Temp\all.txt
 
 # view kubernetes objects
 kubectl get all
-clear
 
 
 
 
 # view release history
 helm history mysql
-clear
 
 
 

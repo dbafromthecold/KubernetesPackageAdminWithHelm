@@ -1,7 +1,8 @@
 ###################################################################################################
 ###################################################################################################
 #
-#
+# https://www.pluralsight.com/courses/kubernetes-package-administration-helm
+# 
 # Module 3 of Kubernetes Package Administration with Helm
 # 
 # Deploying a Chart to Kubernetes
@@ -21,31 +22,26 @@ kubectl config current-context
 
 # test connection to cluster
 kubectl get nodes
-clear
 
 
 
 # list helm repositories
 helm repo list
-clear
 
 
 
 # search stable repository for a mysql chart
 helm search repo stable/mysql
-clear
 
 
 
 # show chart definition
 helm show chart stable/mysql
-clear
 
 
 
 # show chart README
 helm show readme stable/mysql
-clear
 
 
 
@@ -61,7 +57,6 @@ helm show values stable/mysql > C:\Temp\values.txt
 
 # test deployment of chart
 helm install mysql stable/mysql --dry-run --debug
-clear
 
 
 
