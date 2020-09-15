@@ -94,6 +94,20 @@ helm install ourchart .\ourchart
 
 
 
+###################################################################################################
+###################################################################################################
+# If you run into the following error: -
+# 
+# Error: unable to build kubernetes objects from release manifest: error parsing : 
+# error converting YAML to JSON: yaml: invalid leading UTF-8 octet
+#
+# Tomica Kaniski posted a work around here: -
+# https://blog.kaniski.eu/2020/09/having-fun-with-helm-and-file-encoding/
+###################################################################################################
+###################################################################################################
+
+
+
 # view release
 helm list
 
