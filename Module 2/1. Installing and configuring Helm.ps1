@@ -115,8 +115,8 @@ helm version
 
 
 # Add stable (official) repository
- # helm repo add stable https://kubernetes-charts.storage.googleapis.com/ # this is the location of the old stable repo
- helm repo add stable https://charts.helm.sh/stable
+# helm repo add stable https://kubernetes-charts.storage.googleapis.com/ # this is the location of the old stable repo
+helm repo add stable https://charts.helm.sh/stable
 
 
 
