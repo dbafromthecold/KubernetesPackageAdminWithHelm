@@ -15,6 +15,7 @@
 
 
 # search the stable repository for a chart
+# NOTE: This chart is now deprecated but is fine for use in these demos
 helm search repo stable/mysql
 
 
