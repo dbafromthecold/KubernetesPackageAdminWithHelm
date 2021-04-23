@@ -30,6 +30,7 @@ helm repo list
 
 
 # search stable repository for a mysql chart
+# NOTE: This chart is now deprecated but is fine for use in these demos
 helm search repo stable/mysql
 
 
