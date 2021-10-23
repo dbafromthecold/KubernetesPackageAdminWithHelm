@@ -1,0 +1,75 @@
+apiVersion: v1
+entries:
+  chartmuseum:
+  - apiVersion: v2
+    appVersion: 0.13.1
+    created: "2021-10-23T14:25:42.213855+01:00"
+    description: Host your own Helm Chart Repository
+    digest: 6c21da8808ec0e07b20ec6b61c2e7c827f8ebd325b3e590e21fe7bd6ab08624b
+    home: https://github.com/helm/chartmuseum
+    icon: https://raw.githubusercontent.com/chartmuseum/charts/main/logo.jpg
+    keywords:
+    - chartmuseum
+    - helm
+    - charts repo
+    maintainers:
+    - name: chartmuseum
+      url: https://github.com/chartmuseum
+    name: chartmuseum
+    sources:
+    - https://github.com/chartmuseum/charts/tree/main/src/chartmuseum
+    - https://github.com/chartmuseum
+    - https://github.com/helm/chartmuseum
+    urls:
+    - chartmuseum-3.3.0.tgz
+    version: 3.3.0
+  mysql:
+  - apiVersion: v1
+    appVersion: 5.7.30
+    created: "2021-10-23T14:25:42.236854+01:00"
+    description: Fast, reliable, scalable, and easy to use open-source relational
+      database system.
+    digest: d9a99412fa7f28f8a2443060a40cfed95f5cb5f09fffa1acfe51e114e9c73d18
+    home: https://www.mysql.com/
+    icon: https://www.mysql.com/common/logos/logo-mysql-170x115.png
+    keywords:
+    - mysql
+    - database
+    - sql
+    maintainers:
+    - email: o.with@sportradar.com
+      name: olemarkus
+    - email: viglesias@google.com
+      name: viglesiasce
+    name: mysql
+    sources:
+    - https://github.com/kubernetes/charts
+    - https://github.com/docker-library/mysql
+    urls:
+    - mysql-1.6.4.tgz
+    version: 1.6.4
+  - apiVersion: v1
+    appVersion: 5.7.28
+    created: "2021-10-23T14:25:42.2228552+01:00"
+    description: Fast, reliable, scalable, and easy to use open-source relational
+      database system.
+    digest: 2e396f9919166098efe2dfd01099db50ab2b06213d200e8990cab9fa1d8c4868
+    home: https://www.mysql.com/
+    icon: https://www.mysql.com/common/logos/logo-mysql-170x115.png
+    keywords:
+    - mysql
+    - database
+    - sql
+    maintainers:
+    - email: o.with@sportradar.com
+      name: olemarkus
+    - email: viglesias@google.com
+      name: viglesiasce
+    name: mysql
+    sources:
+    - https://github.com/kubernetes/charts
+    - https://github.com/docker-library/mysql
+    urls:
+    - mysql-1.6.3.tgz
+    version: 1.6.3
+generated: "2021-10-23T14:25:42.2048556+01:00"
