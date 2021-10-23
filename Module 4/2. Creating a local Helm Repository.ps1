@@ -14,13 +14,15 @@
 
 
 
-# test deploying Chart Museum
-helm install chartmuseum stable/chartmuseum --dry-run --debug
+# test deploying Chart Museum from the custom repository
+# offical repository for chartmuseum is
+# https://artifacthub.io/packages/helm/chartmuseum/chartmuseum
+helm install chartmuseum andrewpruski/chartmuseum --dry-run --debug
 
 
 
 # deploy Chart Museum
-helm install chartmuseum stable/chartmuseum --set env.open.DISABLE_API=false
+helm install chartmuseum andrewpruski/chartmuseum --set env.open.DISABLE_API=false
 
 
 
@@ -29,13 +31,13 @@ helm list
 
 
 
-# view Chart Museum pod
-kubectl get pods
+# view Chart Museum pod ans its labels
+kubectl get pods --show-labels
 
 
 
-# grab the Chart Museum pod name
-$POD_NAME=$(kubectl get pods -l "app=chartmuseum" -o jsonpath="{.items[0].metadata.name}")
+# grab the Chart Museum pod name using the label retrieved from the previous command
+$POD_NAME=$(kubectl get pods -l "app.kubernetes.io/name=chartmuseum" -o jsonpath="{.items[0].metadata.name}")
 echo $POD_NAME
 
 
@@ -50,12 +52,12 @@ kubectl port-forward $POD_NAME 8080:8080 --namespace default
 
 
 
-# view helm help
+# view Helm help to get location of Helm Configuration Path
 helm --help
 
 
 
-# navigate to folder containing repository names and URLs
+# navigate to folder containing repository names and URLs, e.g. -
 # C:\Users\apruski\AppData\Roaming\helm\
 
 
@@ -101,12 +103,12 @@ helm search repo chartmuseum/ourchart
 
 
 
-# view helm help again
+# view helm help again to get Helm Cache Path
 helm --help
 
 
 
-# view cached index.yaml file for repository
+# view cached chartmuseum-index.yaml file for repository
 # C:\Users\apruski\AppData\Local\Temp\helm\repository
 
 
@@ -116,7 +118,7 @@ helm repo update
 
 
 
-# view updated index.yaml file for repository
+# view updated chartmuseum-index.yaml file for repository
 # C:\Users\apruski\AppData\Local\Temp\helm\repository
 
 

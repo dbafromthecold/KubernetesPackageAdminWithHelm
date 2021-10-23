@@ -29,39 +29,38 @@ helm repo list
 
 
 
-# search stable repository for a mysql chart
-# NOTE: This chart is now deprecated but is fine for use in these demos
-helm search repo stable/mysql
+# search repository for a mysql chart
+helm search repo andrewpruski/mysql
 
 
 
 # show chart definition
-helm show chart stable/mysql
+helm show chart andrewpruski/mysql
 
 
 
 # show chart README
-helm show readme stable/mysql
+helm show readme andrewpruski/mysql
 
 
 
 # pipe README to file
-helm show readme stable/mysql > C:\Temp\README.txt
+helm show readme andrewpruski/mysql > C:\Temp\README.txt
 
 
 
 # show chart values
-helm show values stable/mysql > C:\Temp\values.txt
+helm show values andrewpruski/mysql > C:\Temp\values.txt
 
 
 
 # test deployment of chart
-helm install mysql stable/mysql --dry-run --debug
+helm install mysql andrewpruski/mysql --dry-run --debug
 
 
 
 # deploy chart
-helm install mysql stable/mysql
+helm install mysql andrewpruski/mysql
 
 
 

@@ -114,11 +114,12 @@ helm version
 
 
 
-# Add stable (official) repository
-# helm repo add stable https://kubernetes-charts.storage.googleapis.com/ # this is the location of the old stable repo
-helm repo add stable https://charts.helm.sh/stable
+# Add a helm repository to use the charts in the following demos
+# using this custom repository as the charts in the stable repository have been deprecated.
+# We'll be creating a custom Helm repository using Github in Module 4
+helm repo add andrewpruski https://raw.githubusercontent.com/dbafromthecold/KubernetesPackageAdminWithHelm/master/
 
 
 
 # Search for a chart
-helm search repo stable/mysql
+helm search repo andrewpruski/mysql

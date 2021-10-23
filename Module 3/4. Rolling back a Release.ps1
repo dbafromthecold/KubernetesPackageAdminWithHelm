@@ -95,7 +95,7 @@ kubectl get replicaset
 
 
 
-# delete old replicaset
+# delete old replicaset - replace NAME with the old replicaset name
 kubectl delete replicaset NAME
 
 
@@ -105,7 +105,7 @@ kubectl get replicaset
 
 
 
-# try a rollback with kubectl
+# try a rollback with kubectl - will fail as we have deleted the old replicaset
 kubectl rollout undo deployment/mysql
 
 
@@ -146,15 +146,5 @@ kubectl get secret sh.helm.release.v1.mysql.v1 -o yaml
 
 
 
-# jump into bash
-bash
-
-
-
-# decode the secret's data
-kubectl get secret sh.helm.release.v1.mysql.v1 -o jsonpath='{ .data.release }' | base64 --decode > /mnt/c/Temp/data.txt
-
-
-
-# decode the deployment data
-cat /mnt/c/Temp/data2.txt | base64 --decode
+# the secret is encoded. For further information on decoding these secrets, see here: -
+# https://dbafromthecold.com/2020/08/10/decoding-helm-secrets/ 

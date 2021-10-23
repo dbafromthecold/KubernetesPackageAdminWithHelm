@@ -14,19 +14,18 @@
 
 
 
-# search the stable repository for a chart
-# NOTE: This chart is now deprecated but is fine for use in these demos
-helm search repo stable/mysql
+# search the repository for a chart
+helm search repo andrewpruski/mysql
 
 
 
-# search the stable repository for a chart and retrieve the different versions
-helm search repo stable/mysql --versions
+# search the stable repository for a chart and retrieve the different versions (2 in the repo)
+helm search repo andrewpruski/mysql --versions
 
 
 
 # install a specific version of the chart
-helm install mysql stable/mysql --version 1.6.3 
+helm install mysql andrewpruski/mysql --version 1.6.3 
 
 
 
@@ -41,7 +40,7 @@ kubectl get all
 
 
 # upgrade the release
-helm upgrade mysql stable/mysql --version 1.6.4
+helm upgrade mysql andrewpruski/mysql --version 1.6.4
 
 
 

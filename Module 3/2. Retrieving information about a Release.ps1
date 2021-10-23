@@ -29,7 +29,7 @@ helm get manifest mysql > C:\Temp\manifests.txt
 
 
 
-# get release values
+# get release values - no user values were supplied so file will be blank
 helm get values mysql > C:\Temp\values.txt
 
 
